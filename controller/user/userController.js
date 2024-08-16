@@ -51,7 +51,7 @@ const createOTP = () => {
 // ------send mail----------------------------------------------------
 const sendOTPEmail = async (email, otp) => {
   // Configure nodemailer
-  console.log('loaded send otp mail');
+  console.log('loaded send otp mail:',otp);
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {

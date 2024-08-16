@@ -4,3 +4,4 @@
 # secret
 .env
 /backup file
+/node_modules

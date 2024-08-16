@@ -48,7 +48,7 @@ function generateHr(doc, y) {
   doc.strokeColor("#aaaaaa").lineWidth(1).moveTo(50, y).lineTo(550, y).stroke();
 }
 
-// ------------------------------------------------------------------
+// -----------------generate pdf router-------------------------------------------------
 const generatePdf = async (req, res) => {
   try {
     const orderId = req.body.orderId;
@@ -187,6 +187,8 @@ const generatePdf = async (req, res) => {
     res.status(500).send("Error generating PDF");
   }
 };
+
+//--------------------------------user rpofile--------------------------------------
 const userProfile = async (req, res) => {
   try {
     const userid = req.session.user_id;

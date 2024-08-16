@@ -67,12 +67,8 @@ const PlaceToOrder = async (req, res) => {
     const userid = req.session.user_id;
 
     // console.log("body---------->", req.body);
-    const {
-      selectedAddress,
-      selectedPayment,
-      subTotal,
-      couponDiscount,
-    } = req.body;
+    const { selectedAddress, selectedPayment, subTotal, couponDiscount } =
+      req.body;
 
     console.log(
       selectedAddress,
@@ -143,7 +139,7 @@ const PlaceToOrder = async (req, res) => {
       const date = new Date();
 
       const userData = await Userdb.findOneAndUpdate(
-        { _id: userid }, 
+        { _id: userid },
         {
           $inc: { walletBalance: -subTotal },
           $push: {

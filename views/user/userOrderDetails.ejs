@@ -326,7 +326,7 @@
 
             function retryPayment() {
                 axios.post('/retryRazorPayment', {
-                    orderId: '<%= orderLists._id %>'
+                    orderId: '<%= orderLists._iqd %>'
                 })
                     .then(response => {
                         console.log('response:id:', response.data.orderId, 'Response data: ', response.data.paymentDetails);
@@ -336,7 +336,7 @@
                         console.error('Error:', error);
 
                     });
-            }
+            }w
             function razorpayRetryPayment(order, ID) {
                 console.log('id::', ID, 'order:>', order,);
 
