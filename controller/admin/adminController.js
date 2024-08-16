@@ -1,5 +1,6 @@
 const Userdb = require("../../model/userModel");
-const bcrypt = require("../../public/js/bycrypt");
+// const bcrypt = require("../../public/js/bycrypt");
+const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 const Order = require("../../model/orderModel");
 const Product = require("../../model/productModal");
