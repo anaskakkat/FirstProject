@@ -1,5 +1,4 @@
 const Product = require("../../model/productModal");
-const Cart = require("../../model/cartModal");
 const Userdb = require("../../model/userModel");
 const Order = require("../../model/orderModel");
 const bcrypt = require("bcryptjs");
@@ -8,8 +7,7 @@ const path = require("path");
 const PDFDocument = require("pdfkit");
 const Razorpay = require("razorpay");
 const crypto = require("crypto");
-const moment = require("moment");
-const { log } = require("console");
+ 
 
 require("dotenv").config();
 
@@ -17,7 +15,7 @@ require("dotenv").config();
 
 var instance = new Razorpay({
   key_id: process.env.RAZORPAY_ID,
-  key_secret: process.env.RAZORPAY_SECRET,
+  key_secret: process.env.RAZORPAY_SECRET, 
 });
 // Function to generate HMAC-SHA256
 function hmac_sha256(data, key) {
